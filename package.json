@@ -1,0 +1,28 @@
+{
+  "name": "git-flow-cli",
+  "version": "0.1.0",
+  "description": "manage your git flow",
+  "author": "liaozhongwu<liaozhongwu95@163.com>",
+  "devDependencies": {
+    "@types/node": "^10.10.0",
+    "@types/yargs": "^11.1.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "yargs": "^12.0.1"
+  },
+  "bin": {
+    "gitflow": "dist/bin/cli.js"
+  },
+  "scripts": {
+    "install": "node dist/post/install.js",
+    "uninstall": "node dist/post/uninstall.js",
+    "dev": "tsc -p . -w",
+    "build": "rm -r ./dist && tsc -p . && chmod -R 755 ./dist"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ]
+}
